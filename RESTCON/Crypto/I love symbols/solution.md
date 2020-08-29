@@ -11,7 +11,7 @@
 > Hint: mY kEybOard !s br)ken.
 
 ## Solution
-Tried a lot but couldn't solve it without the hint. The `!s br)ken.` part of the HINT got my eye on the number pad of my keyboard and I made a [script](dec.py)
+Tried a lot but couldn't solve it without the hint. The `!s br)ken.` part of the HINT got my eye on the number pad of my keyboard and I wrote a python script
 to decode these special characters to numbers.
 
 ![keyboard num pad](keyboard.png)
