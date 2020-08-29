@@ -12,7 +12,8 @@ wireshark, pdf-analysis, 300 points
 Analyzing the logs.pcapng file in Wireshark, I got the [binod.exe](binod.exe) file. Actually it is a PDF file with base64 encoded strings. Luckily we have 
 [Cyberchef](https://gchq.github.io/CyberChef/) and decoding the base64 string gives us repeated "Binod Binod...." strings. :(
 
-Then I tried to use `strings` on binod.exe and got the [list of objects](https://medium.com/@tho.le/pdf-forensics-introduction-part-1-6e8232935828) from the PDF.
+Then I tried to use `strings` on binod.exe (`pdf-parser` showed a better result actually) and got the [list of objects](https://medium.com/@tho.le/pdf-forensics-introduction-part-1-6e8232935828) from the PDF.
+
 This string object caught my eye...
 
 ```bash
