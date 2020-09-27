@@ -43,7 +43,7 @@ for i in array:    # for every col:
 
 img.show()
 ```
-**Final Image**
-![]()
+**Final Image**<br>
+![](quickfix.png)
 ## Flag:
->darkCTF{-2147483648_c0m3s_aft3r_2147483647}
+>darkCTF{mag1c_byt3s}
