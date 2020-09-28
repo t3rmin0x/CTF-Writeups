@@ -7,7 +7,7 @@
 
 ## Solution
 Read the 1st part [link](https://github.com/t3rmin0x/CTF-Writeups/blob/master/DarkCTF/Forensics/Powershell/README.md)<br>
-I opened the `Suspicious.reg` file in sublime text and searched for `suspicious`keyboard and got this
+I opened the `Suspicious.reg` file in sublime text and searched for `suspicious`keyword and got this
 ```
 [HKEY_USERS\S-1-5-21-1473425136-1446414652-728660776-1000\Software\Suspicious]
 @="ZGFya0NURntIM3IzXzFzXzV1NXAxYzEwdXN9"
