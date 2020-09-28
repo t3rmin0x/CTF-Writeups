@@ -61,3 +61,16 @@ Base85 decode the string gives the flag.
 
 ## Flag:
 >darkCTF{R0bb3ry_1s_Succ3ssfullll!!}
+
+# Challenge: Squids
+>Squids in the linux pool<br>
+ssh ctf@squid.darkarmy.xyz -p 10000 password: wolfie
+
+## Solution
+I found a interesting SUID binary.
+```bash
+```
+It can run `cat` command as root
+
+## Flag:
+>
