@@ -1,5 +1,5 @@
-# PowerShell
-> Points: 430
+# Minetest 1
+> Points: 303
 
 ## Description
 >Just a sanity check to see whether you installed Minetest successfully and got into the game.<br>
