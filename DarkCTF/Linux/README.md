@@ -29,7 +29,7 @@ So I used the above password to gain access to `wolf2`. And searched for files i
 ```bash
 ```
 ## Flag:
->
+>darkCTF{w0ahh_n1c3_w0rk!!!}
 
 # Challenge: Secret Vault
 >There's a vault hidden find it and retrieve the information. Note: Do not use any automated tools.<br>
@@ -73,4 +73,4 @@ I found a interesting SUID binary.
 It can run `cat` command as root
 
 ## Flag:
->
+> darkCTF{y0u_f0und_the_squ1d}
