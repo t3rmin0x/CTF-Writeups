@@ -16,6 +16,8 @@ Assuming the **N** to be a big 2048-bit number (general format) and my plaintext
 
 This is the vulnerabilty as `a mod b = a when a < b` so ct = (pt ^ e) mod N becomes equivalent to ct = (pt ^ e).
 
+Taking e-th root of ciphertext will retrieve the plaintext (flag).
+
 ```py
 #!/bin/env python3
 
