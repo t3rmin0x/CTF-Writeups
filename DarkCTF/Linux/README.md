@@ -21,12 +21,33 @@ ssh ctf@findme.darkarmy.xyz -p 10000 password: wolfie
 ## Solution
 As the question suggests about the delete file. I went to `/proc/10/fd` and found 3 files there.
 ```bash
+wolf1@7e6800eb0d43:/proc/10/fd$ ls -la
+total 0
+dr-x------ 2 wolf1 wolf1  0 Sep 28 14:56 .
+dr-xr-xr-x 9 wolf1 wolf1  0 Sep 28 14:56 ..
+lr-x------ 1 wolf1 wolf1 64 Sep 28 14:57 0 -> /dev/null
+l-wx------ 1 wolf1 wolf1 64 Sep 28 14:57 1 -> /dev/null
+l-wx------ 1 wolf1 wolf1 64 Sep 28 14:57 2 -> /dev/null
+lr-x------ 1 wolf1 wolf1 64 Sep 28 14:57 3 -> '/home/wolf1/pass (deleted)'
+wolf1@7e6800eb0d43:/proc/10/fd$ cat 3
+mysecondpassword123
 ```
 I found out there are 2 users in the home directory.
 ```bash
+wolf1@7e6800eb0d43:/home/wolf1$ ls ../
+wolf1  wolf2
 ```
 So I used the above password to gain access to `wolf2`. And searched for files in it.
 ```bash
+wolf2@7e6800eb0d43:/home/wolf2$ find . -type f
+./.bash_logout
+./.bashrc
+./.profile
+./proc/g/nice_work
+wolf2@7e6800eb0d43:/home/wolf2$ cat proc/g/nice_work | rev
+}galf eht no gnidnats era uoy{FTCkrad
+
+darkCTF{w0ahh_n1c3_w0rk!!!}
 ```
 ## Flag:
 >darkCTF{w0ahh_n1c3_w0rk!!!}
