@@ -1,5 +1,5 @@
 # Crcket
-> Points: 475
+> Points: 469
 
 ## Description
 ```
