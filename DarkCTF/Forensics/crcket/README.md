@@ -101,4 +101,4 @@ No errors detected in new.png (10 chunks, 99.1% compression).
 ```
 ![](final.png)
 ## Flag
-> DarkCTF{7H!5_0n3_was_4_l!ttl3_TRICKY}
+> darkCTF{cycl1c_r3dund4ncy_ch3cK}
