@@ -6,8 +6,12 @@
 
 `5552415c2b3525105a4657071b3e0b5f494b034515`
 ## Solution
-I did a XOR brute force first in [CyberChef](https://gchq.github.io/CyberChef/) but nothing useful came out. So I tried a partial plain text attack.<br>
-I knew the start of the flag was **darkCTF{** (partial plain text) so I xored it with the given hexvalue to get the `key`.<br>
+I did a XOR brute force first in [CyberChef](https://gchq.github.io/CyberChef/) but nothing useful came out. 
+
+So I tried a partial plain text attack.
+
+I knew the start of the flag was **darkCTF{** (partial plain text) so I xored it with the given hexvalue to get the `key`.
+
 Once I got the key I padded it to match the length of the cipher. Finally I xored the padded key and cipher to get the flag.
 
 ```py
