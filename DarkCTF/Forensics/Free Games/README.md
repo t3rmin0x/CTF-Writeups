@@ -6,7 +6,7 @@
 Note: Use the same file provided in Wolfie's Contacts Flag Format: darkCTF{http://site}
 
 ## Solution
-> I tried to do this one on my Kali VM but failed :( So I installed Autopsy in my windows host<br>
+I tried to do this one on my Kali VM but failed :( So I installed Autopsy in my windows host<br>
 I found a zip in the `downlaods` folder. In the zone identifier I found the required link.
 ![](https://github.com/t3rmin0x/CTF-Writeups/blob/master/DarkCTF/Forensics/Free%20Games/game.png)
 
