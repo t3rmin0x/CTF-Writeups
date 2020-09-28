@@ -88,10 +88,18 @@ Base85 decode the string gives the flag.
 ssh ctf@squid.darkarmy.xyz -p 10000 password: wolfie
 
 ## Solution
-I found a interesting SUID binary.
+I searched a little and I found a interesting SUID binary.
 ```bash
+wolf@04a47f9b0d08:/home/wolf1$ find /opt -type f
+/opt/src/src/iamroot
+wolf@04a47f9b0d08:/home/wolf1$ cd /opt/src/src/
+wolf@04a47f9b0d08:/opt/src/src$ ./iamroot 324
+cat: 324: No such file or directory
 ```
 It can run `cat` command as root
-
+```bash
+wolf@04a47f9b0d08:/opt/src/src$ ./iamroot /root/flag.txt
+darkCTF{y0u_f0und_the_squ1d}
+```
 ## Flag:
 > darkCTF{y0u_f0und_the_squ1d}
