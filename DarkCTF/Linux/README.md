@@ -52,7 +52,7 @@ darkCTF{w0ahh_n1c3_w0rk!!!}
 ## Flag:
 >darkCTF{w0ahh_n1c3_w0rk!!!}
 
-# Challenge: Secret Vault
+# Challenge: Secret Vault ![badge](https://img.shields.io/badge/Post%20CTF-Writeup-success)
 >There's a vault hidden find it and retrieve the information. Note: Do not use any automated tools.<br>
 ssh ctf@vault.darkarmy.xyz -p 10000
 
@@ -83,7 +83,7 @@ Base85 decode the string gives the flag.
 ## Flag:
 >darkCTF{R0bb3ry_1s_Succ3ssfullll!!}
 
-# Challenge: Squids
+# Challenge: Squids ![badge](https://img.shields.io/badge/Post%20CTF-Writeup-success)
 >Squids in the linux pool<br>
 ssh ctf@squid.darkarmy.xyz -p 10000 password: wolfie
 
