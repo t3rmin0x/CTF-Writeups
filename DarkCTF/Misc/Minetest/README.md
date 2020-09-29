@@ -6,12 +6,18 @@
 [File](https://mega.nz/file/zxlhlAYL#1SbgYkhBMHqyeCWNNHNIASAxanpEMLi2CGxHjRod4k8)
 
 ## Solution
+This was the best challenge for me in the whole event bcz I love games :) #gamer<br>
 We are given `mods` and `worlds` folder of Minetest game. I downloaded the game on [windows](https://www.minetest.net/downloads/)
-Copied the folders in the game directory and started the game. I was greeted with this.
-![]()
-Roaming around I see: There are 16 switches from which connections come and form a series of logical gates with only one output.
-This means I have to on/off (0 or 1) the switches and solve the series of gates. It was simple and solving that I got this
-![]()
-
+Copied the folders in the game directory and started the game. 
+![](game.png)
+I was greeted with this.
+![](Screenshot_1.png)
+Roaming around I see: There are 16 switches from which connections come and form a logical circuit with and, or , not gates
+This means I have to on/off (0 or 1) the switches and solve the series of gates.
+![](Screenshot_2.png)
+![](Screenshot_3.png)
+Completing a part of the connection brightens the circuit.
+Finally completing the circuit triggers something (code block perhaps) and gives us the 1st flag and instructions to the next one.
+![](trigger.gif)
 ## Flag
->
+>DarkCTF{y0u_5ucess_fu11y_1ns7alled_m1n37e57}
