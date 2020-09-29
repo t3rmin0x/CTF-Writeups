@@ -49,3 +49,19 @@ Equipped the book and and opened it to get the flag and a key for some ciphertex
 
 ## Flag
 >darkCTF{y0u_4r3_4_1337_p14y3r}
+
+# Minetest 3
+> Points: 485
+
+## Description
+>The guy who messed up my files left some message for me I'm unable to 
+find it anywhere could you help me find it
+
+## Solution
+As it says about files I was looking in the `worlds` and `mods` and found a flag like string in the `auth.sqlite` file.<br>
+`VBGEDOL{34WX_Q33UZ_13T0R_5MY33UZ}` <br>
+We need to decode this with the key we found before `RSIGJNSVGC`<br>
+Then I searched for key based cipher and finally got it decoded by [PlayFair cipher](https://www.boxentriq.com/code-breaking/playfair-cipher) (relation with the challenge)
+`DARKCTF{34ZY_P33ZY_13M0N_5QU33ZY}`
+## Flag
+> darkCTF{34zy_p33zy_13m0n_5qu33zy}
