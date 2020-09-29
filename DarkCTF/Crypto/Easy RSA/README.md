@@ -4,7 +4,7 @@
 ## Description
 > Just a easy and small E-RSA for you :)
 
->[File](https://mega.nz/file/600TkQbK#0o6mqJjLxReiBoP3HAtsYj8ulp9K99246EdzmeVNiS4)
+[File](https://mega.nz/file/600TkQbK#0o6mqJjLxReiBoP3HAtsYj8ulp9K99246EdzmeVNiS4)
 
 ## Solution
 
