@@ -1,4 +1,4 @@
-# Embrace the Climb
+# Embrace the Climb ![badge](https://img.shields.io/badge/Post%20CTF-Writeup-success)
 > Points: 497
 
 ## Description
