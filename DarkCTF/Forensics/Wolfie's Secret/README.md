@@ -44,9 +44,9 @@ Then I ran strings and found some interesting stuff
 ```
 Researching a little I found out its a .tiff file. Changed the 1st 4 bytes to `49 49 2A 00`.
 ```bash
-⚡ root@ignite  ~/Documents/darkCTF  file Secret
+⚡ root@ignite  ~/Documents/darkCTF> file Secret
 Secret: TIFF image data, little-endian, direntries=21, height=1920, bps=46028, compression=LZW, PhotometricIntepretation=RGB, orientation=upper-left, width=1080
 ```
-![](Secret.tiff)
+![](Secret.png)
 ## Flag
 >darkCTF{F1x1ng_!m4g3_h34d3r_15_D1ff1cult}
