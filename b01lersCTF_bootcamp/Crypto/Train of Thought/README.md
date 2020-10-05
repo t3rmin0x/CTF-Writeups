@@ -7,14 +7,14 @@
 > [trainofthought.txt](trainofthought.txt)
 
 # Solution
-After trying different approaches (failed in all of them and almost gonna giveup `;-;` ), I read the description again and searched for the word **Levenshtein**. 
+After trying different approaches (failed in all of them and almost gonna giveup `;-;`), I decided to read the description again and search for the word **Levenshtein**. 
 
 The search result showed - [Levenshtein distance - Wikipedia](https://en.wikipedia.org/wiki/Levenshtein_distance)
 
-Then I thought the words also look ~similar~, I mean we can add, remove or replace letters to transform then into one another. 
-Umm... maybe we can calculate the **Levenshtein Distance** of the consecutive words.
+Then I thought the words look ~similar~, I mean we can add, remove or replace letters to transform them into one another. 
+Umm... maybe we can calculate the **Levenshtein Distance** of the consecutive words (random guess, 1st I tried to calculate 2 words at a time `:p`).
 
-I searched a little more and got hind that we can map these **Levenshtein Distances** with the letters in english alphabate. A simple python script did the job and 
+I searched a little more and got hind that we can map these **Levenshtein Distances** with the letters in english alphabet. A simple python script did the job and 
 I got the flag. `\(^-^)/`
 
 ### Script - [leven.py](leven.py)
