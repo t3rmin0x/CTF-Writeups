@@ -12,17 +12,17 @@
 We can get a hint from the Description and the name of the Challenge that it is **Hill Cipher**.
 
 **The basic idea behind the Encryption Scheme is :**
-* Select alphabate containting ***N*** letters.
+* Select alphabet containting ***N*** letters.
 
 | Letter |a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|x|y|z|0|1|2|3|4|5|6|7|8|9|{|}| |_|
 |--------|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|
 | Number |0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36|37|38|39|40|
 
-* Use an ***n* x *n* invertible matrix (modulo *N*)** (where ***N*** is the total number of letters in the alphabate) as the key.
+* Use an ***n* x *n* invertible matrix (modulo *N*)** (where ***N*** is the total number of letters in the alphabet) as the key.
 * Multiply each block of ***n*** plaintext letter numbers mapped to the respective letters with it.
 
 **The Decryption Scheme is :**
-* Select the same alphabate containting ***N*** letters. (In this challenge we have to guess the alphabate map from the ciphertext)
+* Select the same alphabet containting ***N*** letters. (In this challenge we have to guess the alphabet map from the ciphertext)
 * Find the **inverse** of the given key matrix.
 * Use the inverted ***n* x *n* matrix (modulo *N*)** as the key.
 * Multiply each block of ***n*** ciphertext letter numbers mapped to the respective letters with it.
