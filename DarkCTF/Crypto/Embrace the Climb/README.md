@@ -27,89 +27,72 @@ We can get a hint from the Description and the name of the Challenge that it is 
 * Use the inverted ***n* x *n* matrix (modulo *N*)** as the key.
 * Multiply each block of ***n*** ciphertext letter numbers mapped to the respective letters with it.
 
-Luckily I found a script from an old writeup on similar challenge - [IceCTF [Cryptography] - Hill Cipher](https://teamrocketist.github.io/2016/08/26/IceCTF-Cryptography-Hill-Cipher/)
-and I modified the script to find the flag.
-
 ```py
-import math
-import sympy
-from sympy import init_printing, pprint
-from sympy import Matrix
-from sympy.vector import matrix_to_vector, CoordSysCartesian
-init_printing()
+#!/usr/bin/env python3
+import numpy as np
+from sympy import *
+import itertools
 
-def decrypt(matrix, words, alph_map):
-    cipher = ''
-    M = Matrix(matrix)
-    M = M.inv_mod(40)	# inverse of the matrix M (mod N) (where N = no. of letters in alphabate)
-    length = len(M)
-    d = {}
-    d2 = {}
+def make_char_set():
+    init = "abcdefghijklmnopqrstuvwxyz0123456789"
+    end = "{}_ "
+    char_set = []
     
-    alph = alph_map
+    comb = list(itertools.permutations(end, 4))     # rearranges end characters i.e. "{}_ "
+    for i in range(len(comb)):
+        end = ''.join(c for c in comb[i])
+        char_set.append(init + end)
+    return char_set
 
-    for x in range(len(alph)):
-        d[alph[x]] = x
-        d2[x] = alph[x]
+def decrypt(ciphertext, key, char_set):
+    key = Matrix(key)
+    # Calculate inverse of the Key matrix(mod N) where N = no. of chars in alphabet
+    inv_key = key.inv_mod(40)       
+
+    pt = ''
+    # Loop through n chars at a time when Key matrix is n x n
+    for i in range(0, len(ciphertext), 3):
+        chars = ciphertext[i : i+3]     
+        chars_index = [char_set.index(ch) for ch in chars] 
+        res = np.dot(inv_key, chars_index) % 40         # matrix mult and (mod N)
+        pt += ''.join(char_set[int(i)] for i in res)
+    return pt
+
+ciphertext = "lkeitrx66dcw{3zy1}tvzlrb4ilp9}1m0ifqjvuu3 1m0h9b5dc ucu3eicw{n}nauu3 95o00jd 0q55x66nwm"
+key = [ [6, 24, 1],         # key matrix
+        [13, 16, 10], 
+        [20, 17, 15]
+    ]       
+
+char_set = make_char_set()     # make a list of possible character set (alphabet)
+
+for x in char_set:
+    print("[*] Decrypted with char_set : " + x)
+    print(">>>", decrypt(ciphertext, key, x), "\n")
     
-    count = 0
-    l = []
-
-    for ch in words:
-        if (count+1) % (3+1) == 0:
-            m = Matrix(l)
-            dot_pr_m = M*m
-            
-            n = []
-            for i in dot_pr_m:
-                cipher += d2[i % 40]
-            count = 0
-            l = []
-        l.append(d[ch])
-        count += 1
-    if (count+1) % (3+1) == 0:
-        m = Matrix(l)
-        dot_pr_m = M*m
-        
-        n = []
-        for i in dot_pr_m:
-            cipher += d2[i % 40]
-    return cipher
-
-if __name__ == '__main__':
-    
-    secret = [[6,24,1], [13,16,10], [20,17,15]]		# key matrix
-    ciphertext = "lkeitrx66dcw{3zy1}tvzlrb4ilp9}1m0ifqjvuu3 1m0h9b5dc ucu3eicw{n}nauu3 95o00jd 0q55x66nwm"
-    
-    print("[+] CipherText: \n"+ ciphertext)
-
-alph_maps = ["abcdefghijklmnopqrstuvwxyz0123456789_{} ",
-			"abcdefghijklmnopqrstuvwxyz0123456789 {}_",
-			"abcdefghijklmnopqrstuvwxyz0123456789 {_}",
-			"abcdefghijklmnopqrstuvwxyz0123456789_{ }",
-			"abcdefghijklmnopqrstuvwxyz0123456789{} _"
-			]
-
-print("[+] PlainText : \n")
-for alph_map in alph_maps:
-	print(decrypt(secret, ciphertext, alph_map))
-
 ```
-### Script - [hill.py](hill.py)
+### Script - [hill_dec.py](hill_dec.py)
 
 ### Output
 ```bash
 ┌──(root 🔱 r3yc0n1c)-[/darkCTF-finals/crypto/Embrace the Climb]
-└─# python3 hill.py                                                        
-[+] CipherText: 
-lkeitrx66dcw{3zy1}tvzlrb4ilp9}1m0ifqjvuu3 1m0h9b5dc ucu3eicw{n}nauu3 95o00jd 0q55x66nwm
-[+] PlainText : 
+└─# ./hill_dec.py
+[*] Decrypted with char_set : abcdefghijklmnopqrstuvwxyz0123456789{}_ 
+>>> {h1ll_cl1mb1n9_15_h4rd_bu7_n07_7h3_c1ph3r__7h3_b357_v13w_c0m35_4f73r_7h3_h4rd357_cl1mb} 
 
-_h1ll}cl1mb1datlywh4rd}bu7}{tr}7h3}c1ph3r}}7h3}b357}v13w}c0md3d4f73r}7h3}h4rd357}cl1mb{
- h1ll}cl1mb1datlywh4rd}bu7}{tr}7h3}c1ph{}g}7h3}b3572ge3w}c0md3d4f7{}g7h3}h4g7p57}cl1mb{
- h1ll_cl1mb1dat9rgh4rd_bu7_vmb_7h3_c1ph{_g_7h3_b3572ge3w_c0m1w14f7{_g7h3_h4g7p57_cl1mb{
-_h1ll cl1mb1dat9rgh4rd bu7 vmb 7h3 c1phfyo 7h3 b357iqg3w c0m1w14f7fyo7h3 h4anl57 cl1mb{
-{h1ll cl1mb1n9 15 h4rd bu7 n07 7h3 c1phfyo 7h3 b357iqg3w c0m35 4f7fyo7h3 h4anl57 cl1mb}
+[*] Decrypted with char_set : abcdefghijklmnopqrstuvwxyz0123456789{} _
+>>> {h1ll cl1mb1n9 15 h4rd bu7 n07 7h3 c1phfyo 7h3 b357iqg3w c0m35 4f7fyo7h3 h4anl57 cl1mb} 
+
+[*] Decrypted with char_set : abcdefghijklmnopqrstuvwxyz0123456789{_} 
+>>> {h1ll}cl1mb1n9}lywh4rd}bu7}_tr}7h3}c1ph3r}}7h3}b357}v13w}c0mnyw4f73r}7h3}h4rd357}cl1mb_ 
+
+[*] Decrypted with char_set : abcdefghijklmnopqrstuvwxyz0123456789{_ }
+>>> {h1ll cl1mb1n9 9rgh4rd bu7 vmb 7h3 c1phfyo 7h3 b357iqg3w c0m_rg4f7fyo7h3 h4anl57 cl1mb_ 
+
+[*] Decrypted with char_set : abcdefghijklmnopqrstuvwxyz0123456789{ }_
+>>> {h1ll}cl1mb1n9}lywh4rd}bu7} tr}7h3}c1phv54}7h3}b357slz3w}c0mnyw4f7v547h3}h4xx757}cl1mb 
+
+...
 
 ```
 ## Flag 
