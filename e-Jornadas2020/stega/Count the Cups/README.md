@@ -16,7 +16,9 @@ root@kali:~/Downloads/stega/count_the_cups# file steganopayload924364.txt
 steganopayload924364.txt: JPEG image data, JFIF standard 1.01, resolution (DPI), density 96x96, segment length 16, baseline, precision 8, 188x78, components 3
 ```
 * Changed the file extension to `.jpg` and got an inverted image.
+
 ![steg1.jpg](steg1.jpg)
+
 * Flipped the image and counted the total number of **cups**.
 ![steg1_flipped.jpg](steg1_flipped.jpg)
 
