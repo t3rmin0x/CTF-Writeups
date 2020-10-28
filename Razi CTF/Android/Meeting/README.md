@@ -36,5 +36,6 @@ Your file has been written to: mickey_mouse.jpg.out
 └─# cat mickey_mouse.jpg.out
 39.600098, 2.925191
 ```
+Googling this location gives Franciscanas Hijas de la Misericordia
 ## Flag
-> RaziCTF{39.600098, 2.925191}
+> RaziCTF{FranciscanasHijasdelaMisericordia}
