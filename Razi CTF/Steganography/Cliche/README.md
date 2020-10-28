@@ -1,5 +1,5 @@
 # Cliche
-> 799 points
+> 799 points ( 2nd :drop_of_blood: )
 
 ## Description
 > I told my friend SCOTTIE that this challenge is cliché and he said I'm not the only 1 who thinks that way. <br>
