@@ -10,7 +10,10 @@
 * We can use a program called `qsstv` to convert the audio back to the image.
 * Tutorial: [How to convert (decode) a Slow-Scan Television transmissions (SSTV) audio file to images using QSSTV](https://ourcodeworld.com/articles/read/956/how-to-convert-decode-a-slow-scan-television-transmissions-sstv-audio-file-to-images-using-qsstv-in-ubuntu-18-04)
 * However, I used [this script](https://github.com/r3yc0n1c/CTFs/blob/master/Tools/QSSTV/qsstv.sh) to configure and run `qsstv`.
-* Result:
+* Also, the Challenge Description hinted that we should select **SCOTTIE 1** as the **mode** of **QSSTV**.
+
+* The end result:
+
 ![flag](flag.png)
 
 ## Flag
