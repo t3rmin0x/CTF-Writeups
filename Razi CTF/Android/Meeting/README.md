@@ -19,7 +19,7 @@ I extracted the image from wireshark. Made a wordlist of the phone numbers we go
 41223365236
 99632531930
 89633366552
-77632351752                                                                                                                                                                                                                                           
+77632351752
 ┌──(root💀ignite)-[~/CTF/Razi/Pics]
 └─# stegcracker mickey_mouse.jpg wordlist.txt
 StegCracker 2.0.9 - (https://github.com/Paradoxis/StegCracker)
@@ -31,10 +31,10 @@ Successfully cracked file with password: 22361255893
 Tried 4 passwords
 Your file has been written to: mickey_mouse.jpg.out
 22361255893
-                                                                                                                                                                                                                                           
+
 ┌──(root💀ignite)-[~/CTF/Razi/Pics]
 └─# cat mickey_mouse.jpg.out
-39.600098, 2.925191                                                                                                                                                                                                                                           
+39.600098, 2.925191
 ```
 ## Flag
 > RaziCTF{39.600098, 2.925191}
