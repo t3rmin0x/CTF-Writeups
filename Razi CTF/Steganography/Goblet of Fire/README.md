@@ -1,5 +1,5 @@
 # Goblet of Fire
-> 953 points
+> 953 points ( 1st :drop_of_blood: )
 
 # Description
 > I think Granger is smart enough to help you solve this challenge! <br>
