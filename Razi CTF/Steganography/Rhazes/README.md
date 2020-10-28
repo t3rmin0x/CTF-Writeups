@@ -8,6 +8,8 @@
 ## Solution
 The give zip file had a huge(~10 mb) `.jpg` image file with dimension `8536x9688`. 
 
+Click [here](Rhazes.jpg) to see the image.
+
 ```console
 root@kali:~/Downloads/razi/steg/Rhazes# file Rhazes.jpg 
 Rhazes.jpg: JPEG image data, JFIF standard 1.01, resolution (DPI), density 72x72, segment length 16, baseline, precision 8, 8536x9688, components 3
