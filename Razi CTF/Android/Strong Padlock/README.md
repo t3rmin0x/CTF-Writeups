@@ -79,6 +79,7 @@ public class a3 {
 }
 ```
 Returns `_3R4` (as i=12 from switcher)
+But as for flag it should be `_4R3` or it wouldn't make sense
 
 ### Function a4
 ```java
@@ -160,9 +161,33 @@ This is the most complicated function jadx can't decompile most of it's code. Th
 The code is too complicated to understand..
 I bruteforced the digits after the 1st one bcz it's obviously `_` and searched for meaningful word. Generated a simple wordlist for indices with crunch for bruteforce `crunch 6 6 012 > combi`
 ```py
+arr1 = ["a", "b", "T"]
+arr2 = ["0", "1", "2"]
+arr3 = ["A", "B", "D"]
+arr4 = ["3", "R", "$"]
+arr5 = ["H", "Q", "3"]
+arr6 = ["I", "J", "K"]
 
+f = open("combi")
+lines = f.readlines()
+for line in lines:
+	combination = (line.strip())
+	junk = []
+	for i in combination:
+		junk.append(int(i))
+	# print(junk)
+	flag = ""
+	flag += str(arr1[junk[0]])
+	flag += str(arr2[junk[1]])
+	flag += str(arr3[junk[2]])
+	flag += str(arr4[junk[3]])
+	flag += str(arr5[junk[4]])
+	flag += '4'
+	flag += str(arr6[junk[5]])
+	print(flag)
 ```
-The meaningful word is ``
-So the total return is `}`
+The meaningful word is `TOBR34K`
+So the total return is `T0_BR34K}` (without `_` it would not be flag)
+
 ## Flag
 > RaziCTF{P4dL0CK5_4R3_FUN_T0_BR34K}
