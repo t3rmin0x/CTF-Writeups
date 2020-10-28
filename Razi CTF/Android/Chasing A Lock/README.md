@@ -5,7 +5,8 @@
 > as locks are so popular many will chase them but why? maybe a flag :)
 
 ## Solution
-The app shows locks🔒 at random positions for a very short time interval... If we click the lock 20,000 times it will trigger something.
+The app shows locks🔒 at random positions for a very short time interval... If we click the lock 20,000 times it will trigger something.<br>
+![](locks.png)
 Decompiled the APK with jadx-gui. The Main Activity calls a class named `switcher` this assembles the flag from 5 functions.
 ```java
 public class switcher {
