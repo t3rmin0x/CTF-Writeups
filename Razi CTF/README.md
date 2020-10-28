@@ -2,6 +2,6 @@
 
 >**Duration**: 48 hours
 
->**Rank**:    19th
+>**Rank**:    10th
 
 >**Points**: 27639
