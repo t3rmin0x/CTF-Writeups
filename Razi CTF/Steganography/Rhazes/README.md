@@ -24,7 +24,7 @@ MagicSanitizer.jpg: PNG image data, 4335 x 350, 8-bit/color RGBA, non-interlaced
 Yes that was a `.png` file LOL. The image contained some kind of weird pattern and zooming into it, I found that there's **`R`** written but some kind of same 
 pattern mask was applied to it.
 
-![hidden-file](MagicSanitizer.jpg )
+![hidden-file](MagicSanitizer.png)
 
 So I opened **`stegsolve`** and used **`Analyse > Stereogram solver`**. After clicking a lot (at offset **161**), we can see the original flag!
 
