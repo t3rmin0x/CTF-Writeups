@@ -6,7 +6,7 @@
 
 ## Solution
 App>>> <br>
-![](locks.png)<br>
+![](friends.png)<br>
 I set up a wireshark listener and started the app. It asks for data and shows the results in the app
 ```
 POST /api/data HTTP/1.1
