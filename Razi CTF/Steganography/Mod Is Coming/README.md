@@ -92,7 +92,7 @@ for a in range(0, x):
 	p = image[a,0]			# store pixel data
 	
 	# Brute-force chars in secret data
-	for ch in range(ord('!'), ord('~')):	
+	for ch in range(256):	
 		for k in range(256):
 			r = ((k-10) * ch) % 251
 			g = (k * ch) % 251
