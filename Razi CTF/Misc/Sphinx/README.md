@@ -9,7 +9,7 @@ The `nc` connection gives us random base64 data which turns to be an image like 
 ![shape](shape.png)
 
 Then it asks you a question about the **position** of a particular shape in the image and we have to answer it in the form of **a, b, c** and **d** 
-( where a = top left, b = top right, c = bottom left, d = bottom right ) i.e. for **triangle** in the above image we have to send **b**.
+( where a = top left, b = top right, c = bottom left, d = bottom right ) i.e. for **triangle** in the above image we have to send **c**.
 
 ### Script : [detect.py](detect.py)
 
