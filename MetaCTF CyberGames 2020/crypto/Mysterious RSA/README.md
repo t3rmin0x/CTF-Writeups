@@ -41,7 +41,7 @@ for i in range(1000):
 
 ```
 ### The Attack
-I found a script on Github and modified it for the Attack. Download the [0x43.txt](0x43.txt) file to test.
+I found a script on Github and modified it for the Attack. Download the [0x43.txt](https://github.com/t3rmin0x/CTF-Writeups/blob/master/MetaCTF%20CyberGames%202020/crypto/Mysterious%20RSA/%200x43.txt) file to test.
 
 Script : [hastad-attack.py](hastad-attack.py)
 
