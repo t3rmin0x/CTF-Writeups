@@ -11,6 +11,7 @@
 * Make a copy of the Sheet - [Copy of Oh Sheet!](https://docs.google.com/spreadsheets/d/1aYVG9C1-bqtysSSLKuJRA3WoekFO-fTpDww_Lt8VeII/edit?usp=sharing)
 * Clear the formatting [ Format > Clear Formatting ] because they hid some texts by changing the text color to white.
 * Script - [apex.py](apex.py)
+* I used [pypy3](https://www.pypy.org/) for the first time on windows 10 machine to do this brute-force [[it's relatively faster](https://stackoverflow.com/questions/59050724/whats-the-differences-python3-and-pypy3#:~:text=On%20a%20suite%20of%20benchmarks,in%20beta%2C%20targets%20Python%203.)]
 * Guess the key
 
 ## Flag
