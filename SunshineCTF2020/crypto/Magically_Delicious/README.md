@@ -1,5 +1,6 @@
 # Magically Delicious ![badge](https://img.shields.io/badge/Post%20CTF-Writeup-success)
-> 100 points
+> 100 points <br>
+> Solved by r3yc0n1c
 
 ## Description
 > Can you help me decipher this message? <br>
