@@ -1,5 +1,6 @@
 # Hash Browns
-> 400 points
+> 400 points <br>
+> Solved by r3yc0n1c
 
 ## Description
 > Thanks to your help, we have found evidence relating to the unF0r7un@t3s at the location you uncovered in in "(un)F0r7un@t3". We apprehended a couple subjects.
