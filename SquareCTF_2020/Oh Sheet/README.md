@@ -52,7 +52,7 @@ tqzpyncxs -> g bkhm urwpjkszahhw -> 19
 C:\Users\rey\Desktop\pypy3.7-v7.3.2-win32>pypy3.exe C:\Users\rey\Desktop\x.py > flag.txt 
 ```
 ## Find a needle in a haystack
-* The haystack - [flag.txt](flag.txt)
+* The haystack - [flag.txt](flag.7z)
 * The Sheet hinted - `Note that the key consists of lowercase letters, and has no repeated letters. It is 9 characters long. Order of characters matters!`. I searched
 for **1 letter words in english** and found ***i*** and ***a*** (makes sense!)
 * Searched for ***i*** related strings and the first result was `sqjarbctd -> i hovk cvyppogxaply -> 19`.
