@@ -3,10 +3,12 @@
 
 ## Description
 > Can you find the answer?
+> :arrow_down: [image.png](image.png)
 
 ## Solution
 Read the pixels -> convert black pixels to `1` and white to `0` -> binary string to ascii
 
+### Script - [readots.py](readots.py)
 ```py
 from PIL import Image
 
