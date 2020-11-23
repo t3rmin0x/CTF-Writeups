@@ -60,7 +60,7 @@ Extracting them looks like a QR in 0s and 1s
 00000000000000110000000011001100111100001111111100
 ```
 Converted into a image with PIL<br>
-![](QR.png)
+![](QR.png)<br>
 Ran zbarimg to get the flag.
 ```sh
 $ zbarimg QR.png                                                                                                                                                                                                                    ─╯
