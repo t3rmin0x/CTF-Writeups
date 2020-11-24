@@ -117,16 +117,23 @@ So we can bypass this by manually changing the value to 0 during dynamic analysi
 
 Now I run the game and attach the process to gdb. Set a breakpoint in the loadgame before the compare is called. `b *loadgame+594`
 ```
+0x0000000000409187 <+583>:   call   0x6c2700 <CRYPTO_memcmp>
+0x000000000040918c <+588>:   mov    DWORD PTR [rbp-0x280],eax
+0x0000000000409192 <+594>:   cmp    DWORD PTR [rbp-0x280],0x0
+0x0000000000409199 <+601>:   jne    0x4091b2 <loadgame+626>
 ```
 Continue execution and called the `Load Game` in the main game. The program hits the breakpoint.
-```
+```sh
+pwndbg> x/x $rbp-0x280
+0x7ffcddca4c90: 0x00000001
 ```
 Change the value and continue
 ```
+set {int}0x7ffcddca4c90 = 0
 ```
 And we get the flag
 
 ![](flag.png)
 
 ## Flag
->
+> ptm{_P34ac3_4m0ng_wor1d5_b1c20a1a234a46e26dc7dcbfb69}
