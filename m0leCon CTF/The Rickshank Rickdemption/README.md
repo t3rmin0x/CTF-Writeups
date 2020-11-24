@@ -115,7 +115,7 @@ So we see two things... There is a 17th function **`winFunc`** So we need to cha
 And the other thing is there is hash checking of the save value and if the result is **`0`** the game is loaded..
 So we can bypass this by manually changing the value to 0 during dynamic analysis of the game with gdb
 
-Now I run the game and attach the process to gdb. Set a breakpoint in the loadgame before the comapre is called. `b *loadgame+594`
+Now I run the game and attach the process to gdb. Set a breakpoint in the loadgame before the compare is called. `b *loadgame+594`
 ```
 ```
 Continue execution and called the `Load Game` in the main game. The program hits the breakpoint.
