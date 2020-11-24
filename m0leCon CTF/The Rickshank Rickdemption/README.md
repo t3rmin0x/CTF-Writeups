@@ -1,4 +1,4 @@
-# The Rickshank Rickdemption
+# The Rickshank Rickdemption ![badge](https://img.shields.io/badge/Post%20CTF-Writeup-success)
 > Points: 179
 
 ## Description
