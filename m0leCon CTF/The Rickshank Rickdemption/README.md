@@ -6,7 +6,9 @@
 
 ## Solution
 We are given a binary of a 2D game. Some game pics>>><br>
-![](intro.png)
+![](intro1.png)
+![](intro2.png)
+![](map.png)
 ![](levels.png)
 ![](fight.png)
 ![](save.png)
